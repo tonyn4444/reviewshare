@@ -96,7 +96,8 @@ app.post('/campgrounds', function(req, res) {
 	});
 	// redirect to campgrounds index
 })
+var port = process.env.PORT || 3000
 
-app.listen(3000, function() {
-	console.log("Listening on port 3000");
+app.listen(port, process.env.IP, function() {
+	console.log("YelpCamp server started!");
 })
