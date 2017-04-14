@@ -11,7 +11,12 @@ app.set("view engine", "ejs");
 		{ name: "Woodsfair", image: "http://www.photosforclass.com/download/7626464792" },
 		{ name: "Camp Palooza", image: "http://www.photosforclass.com/download/5641024448" },
 		{ name: "The Wilderness", image: "http://www.photosforclass.com/download/4369518024" },
+		{ name: "Woodsfair", image: "http://www.photosforclass.com/download/7626464792" },
+		{ name: "Camp Palooza", image: "http://www.photosforclass.com/download/5641024448" },
+		{ name: "The Wilderness", image: "http://www.photosforclass.com/download/4369518024" },
+		{ name: "Trees and Leaves n Stuff", image: "http://www.photosforclass.com/download/4368764673" },
 		{ name: "Trees and Leaves n Stuff", image: "http://www.photosforclass.com/download/4368764673" }
+
 	]
 
 app.get('/', function(req, res) {
