@@ -7,6 +7,8 @@ var mongoose = require('mongoose');
 
 // mongoose.connect("mongodb://localhost:27017/yelp_camp")
 mongoose.connect("mongodb://tonyn4444:22444455a@ds043210.mlab.com:43210/yelpcampx")
+// console.log(process.env.DATABASEURL)
+mongoose.connect(process.env.DATABASEURL);
 
 // mongodb://tonyn4444:22444455a@ds043210.mlab.com:43210/yelpcampx
 app.use(express.static('public'));
