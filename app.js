@@ -13,14 +13,17 @@ app.use(bodyParser.urlencoded({extended: true}));
 // SCHEMA SETUP
 var campgroundSchema = new mongoose.Schema({
 	name: String,
-	image: String
+	image: String,
+	description: String
 })
 
 var Campground = mongoose.model("Campground", campgroundSchema);
 
 // Campground.create(
 // 	{ 
-// 		name: "Camp Palooza", image: "http://www.photosforclass.com/download/5641024448" 
+// 		name: "Woodfair", 
+// 		image: "http://www.photosforclass.com/download/5641024448",
+// 		description: "This is a huge hill, no bathrooms, no water, and no beautiful granite..."
 // 	}, function(err, campground) {
 // 		if (err) {
 // 			console.log("Could not save campground");
@@ -51,7 +54,7 @@ app.get('/campgrounds', function(req, res) {
 		if (err) {
 			console.log(err);
 		} else {
-			res.render('campgrounds', {campgrounds: allCampgrounds} );
+			res.render('index', {campgrounds: allCampgrounds} );
 		}
 	});
 });
@@ -60,11 +63,23 @@ app.get('/campgrounds/new', function(req, res) {
 	res.render('new');
 });
 
+// show route
+app.get("/campgrounds/:id", function(req, res) {
+	Campground.findById(req.params.id, function(err, foundCampground) {
+		if (err) {
+			console.log(err);
+		} else {
+			res.render("show", {campground: foundCampground});
+		}
+	});
+});
+
 
 app.post('/campgrounds', function(req, res) {
 	var name = req.body.name;
 	var image = req.body.image;
-	var newCampground = {name: name, image: image};
+	var description = req.body.description;
+	var newCampground = {name: name, image: image, description: description};
 	// create a new campground and save to DB
 	Campground.create(newCampground, function(err, newlyCreated) {
 		if (err) {
