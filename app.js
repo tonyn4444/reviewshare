@@ -5,7 +5,10 @@ var mongoose = require('mongoose');
 
 
 
-mongoose.connect("mongodb://localhost:27017/yelp_camp")
+// mongoose.connect("mongodb://localhost:27017/yelp_camp")
+mongoose.connect("mongodb://tonyn4444:22444455a@ds043210.mlab.com:43210/yelpcampx")
+
+// mongodb://tonyn4444:22444455a@ds043210.mlab.com:43210/yelpcampx
 app.use(express.static('public'));
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended: true}));
