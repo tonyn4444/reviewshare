@@ -33,6 +33,11 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 
+// calling app.use on this middleware will call the function on all of our routes
+app.use(function(req, res, next) {
+	res.locals.currentUser = req.user;
+	next();
+});
 
 // Campground.create(
 // 	{ 
@@ -92,6 +97,7 @@ app.get("/campgrounds/:id", function(req, res) {
 
 
 app.post('/campgrounds', function(req, res) {
+
 	var name = req.body.name;
 	var image = req.body.image;
 	var description = req.body.description;
