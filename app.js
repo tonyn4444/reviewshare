@@ -13,7 +13,7 @@ var url = process.env.DATABASEURL || "mongodb://localhost:27017/yelp_camp";
 mongoose.connect(url);
 seedDB();
 // mongodb://tonyn4444:22444455a@ds043210.mlab.com:43210/yelpcampx
-app.use(express.static('public'));
+app.use(express.static(__dirname + '/public'));
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended: true}));
 
