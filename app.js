@@ -9,6 +9,7 @@ var User = require('./models/user');
 var passport = require('passport');
 var LocalStrategy = require('passport-local');
 var methodOverride = require('method-override');
+var flash = require('connect-flash');
 
 var commentRoutes = require("./routes/comments"),
 		campgroundRoutes = require("./routes/campgrounds"),
@@ -23,6 +24,7 @@ app.use(express.static(__dirname + '/public'));
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(methodOverride("_method"));
+app.use(flash());
 
 // Passport configuration
 app.use(require("express-session")({
@@ -41,6 +43,8 @@ passport.deserializeUser(User.deserializeUser());
 // calling app.use on this middleware will call the function on all of our routes
 app.use(function(req, res, next) {
 	res.locals.currentUser = req.user;
+	res.locals.error = req.flash('error');
+	res.locals.success = req.flash('success');
 	next();
 });
 

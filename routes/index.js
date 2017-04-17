@@ -19,18 +19,20 @@ router.get('/register', function(req, res) {
 });
 
 // handle sign up logic
-router.post('/register', function(req, res) {
-	var newUser = new User({username: req.body.username });
-	User.register(newUser, req.body.password, function(err, user) {
-		if(err) {
-			console.log(err);
-			// return statement short circuits if we get an error and will get us out of the call
-			return res.render('register');
-		}
-		passport.authenticate("local")(req, res, function() {
-			res.redirect("/campgrounds");
-		});
-	});
+//handle sign up logic
+router.post("/register", function(req, res){
+    var newUser = new User({username: req.body.username});
+    User.register(newUser, req.body.password, function(err, user){
+        if(err){
+            console.log(err);
+            req.flash("error", err.message);
+            return res.redirect('/register');
+        }
+        passport.authenticate("local")(req, res, function(){
+           req.flash("success", "Successfully signed up! Welcome to YelpCamp, " + req.body.username + "!");
+           res.redirect("/campgrounds"); 
+        });
+    });
 });
 
 // show login form
@@ -50,6 +52,7 @@ router.post("/login", passport.authenticate("local",
 // logout route
 router.get('/logout', function(req, res) {
 	req.logout();
+	req.flash("success", "Logged you out!");
 	res.redirect('/login');
 });
 
