@@ -17,3 +17,41 @@
 #delete-form {
 	display: inline;
 }
+
+#login-form {
+	width: 30%;
+	margin: 7% auto;
+}
+
+#registration-form {
+	width: 30%;
+	margin: 3% auto;
+}
+
+#login-page {
+	background: #e9ebee;
+	width: 100%;
+	height: 100%;
+}
+
+#login-hr {
+	width: 100%; 
+	height: 20px; 
+	border-bottom: 1px solid black; 
+	text-align: center;
+}
+
+#login-hr-span {
+	font-size: 20px; 
+	background-color: #e9ebee; 
+	padding: 0 10px;
+}
+
+#signup-button {
+	margin: 0 auto;
+}
+
+a#signup-button.btn.btn-success.btn-block {
+	width: 50%;
+	height: 2.5em;
+}
