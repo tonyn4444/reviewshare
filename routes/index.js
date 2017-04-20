@@ -11,7 +11,7 @@ var middleware = require('../middleware');
 
 router.get('/', function(req, res) {
 	res.render('landing');
-})
+});
 
 // show register form
 router.get('/register', function(req, res) {
@@ -29,7 +29,7 @@ router.post("/register", function(req, res){
             return res.redirect('/register');
         }
         passport.authenticate("local")(req, res, function(){
-           req.flash("success", "Successfully signed up! Welcome to YelpCamp, " + req.body.username + "!");
+           req.flash("success", "Successfully signed up! Welcome to ReviewShare, " + req.body.username + "!");
            res.redirect("/campgrounds"); 
         });
     });

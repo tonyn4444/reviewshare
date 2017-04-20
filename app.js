@@ -56,5 +56,5 @@ app.use("/campgrounds", campgroundRoutes);
 var port = process.env.PORT || 3000
 
 app.listen(port, process.env.IP, function() {
-	console.log("YelpCamp server started!");
+	console.log("ReviewShare server started!");
 })

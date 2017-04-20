@@ -56,7 +56,60 @@ a#signup-button.btn.btn-success.btn-block {
 	height: 2.5em;
 }
 
+.navbar-default {
+	background-color: #283e4a;
+	color: white;
+	margin: 0 !important;
+	/*border: 3px solid red;*/
+}
+
+#nav-content {
+	color: white !important;
+}
+
 #map {
 	width: 100%;
 	height: 400px;
+}
+
+#index-header {
+	/*border: 3px solid red;*/
+	color: white;
+	width: 100%;
+	background-size: 100% 100%;
+	height: 600px;
+	background-image: url(http://i.imgur.com/emvhOnb.jpg)
+}
+
+#index-header-content {
+	font-size: 20px;
+	margin-top: 12%;
+}
+
+#header-h1 {
+font-size: 50px;
+}
+
+#sub-heading {
+
+}
+
+#index-container {
+	/*border: 3px solid red;*/
+	color: white;
+	width: 100%;
+	background-size: 100% 100%;
+	height: 600px;
+	background-image: url(http://i.imgur.com/emvhOnb.jpg)
+}
+
+
+.footer-copyright {
+	background-color: #283e4a;
+	color: white;
+	height: 100px;
+}
+
+#footer-content {
+	margin-left: 5%;
 }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 	<html>
 		<head>
-			<title>YelpCamp</title>
+			<title>ReviewShare</title>
 		<!-- Latest compiled and minified CSS -->
 			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 			<link rel="stylesheet" href="/stylesheets/styles.css">
@@ -11,24 +11,24 @@
 		<nav class="nav navbar-default">
 			<div class="container-fluid">
 				<div class="navbar-header">
-					<a class="navbar-brand" href="/">YelpCamp</a>
+					<a id="nav-content" class="navbar-brand" href="/">ReviewShare</a>
 
 				</div>
 				<div class="collapse navbar-collapse">
 				<% if(currentUser) { %>
 				<ul class="nav navbar-nav navbar-left">
-						<li><a href="/campgrounds">Campgrounds</a></li>
+						<li><a id="nav-content" href="/campgrounds">Campgrounds</a></li>
 					</ul>
 				<% } %>
-					<ul class="nav navbar-nav navbar-right">
+					<ul class="nav navbar-nav navbar-right" id="nav-content">
 					<% if(!currentUser) { %>
 
 					
-						<li><a href="/login">Login</a></li>
-						<li><a href="/register">Sign Up</a></li>
+						<li><a id="nav-content" href="/login">Login</a></li>
+						<li><a id="nav-content" href="/register">Sign Up</a></li>
 						<% } else {%>
-						<li><a href="#">Signed In As <%= currentUser.username %></a></li>
-						<li><a href="/logout">Logout</a></li>
+						<li><a id="nav-content" href="#">Signed In As <%= currentUser.username %></a></li>
+						<li><a id="nav-content" href="/logout">Logout</a></li>
 						<% } %>
 					</ul>
 				</div>
