@@ -129,7 +129,12 @@ font-size: 50px;
 }
 
 #show-container {
-	margin-top: 40px;
+	margin-top: 50px;
+}
+
+#review-form-container {
+	padding-bottom: 215px;
+
 }
 
 body {
@@ -140,6 +145,18 @@ body {
 #index-main-content {
 	padding-bottom: 50px;
 }
+
+#comment-edit-container{ 
+	padding-bottom: 425px;
+ }
+
+ #campground-edit-container{ 
+	padding-bottom: 215px;
+ }
+
+ #comment-new-container{ 
+	padding-bottom: 422px;
+ }
 
 
 
