@@ -1,5 +1,19 @@
 body {
   background-color: #000;
+  font-family: Raleway;
+}
+
+a:hover {
+  background-color: grey !important;
+}
+
+#landing-header-hr {
+  width: 40%;
+  margin-top: -10px;
+  height: 2px;
+  border: none;
+  color: white !important;
+  background-color: white; /* Modern Browsers */
 }
 
 .landing-a {

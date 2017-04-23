@@ -2,6 +2,10 @@
 	width: 100%;
 }
 
+body {
+	font-family: Raleway;
+}
+
 .thumbnail {
 	padding: 0;
 }
@@ -27,7 +31,7 @@
 #registration-form {
 	width: 30%;
 	margin: 3% auto;
-	padding-bottom: 112px;
+	padding-bottom: 115px;
 }
 
 #login-page {
@@ -156,7 +160,8 @@ body {
  }
 
  #comment-new-container{ 
-	padding-bottom: 422px;
+	padding-bottom: 300px;
+	margin-top: 150px;
  }
 
 
