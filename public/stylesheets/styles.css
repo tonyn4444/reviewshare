@@ -152,7 +152,8 @@ body {
 }
 
 #comment-edit-container{ 
-	padding-bottom: 425px;
+	margin-top: 150px;
+	padding-bottom: 300px;
  }
 
  #campground-edit-container{ 
