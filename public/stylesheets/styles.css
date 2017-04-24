@@ -2,6 +2,11 @@
 	width: 100%;
 }
 
+.index-images {
+	max-height: 200px;
+	min-height: 200px;
+}
+
 body {
 	font-family: Raleway;
 }
