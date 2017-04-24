@@ -17,7 +17,7 @@
 
 	<div class="row text-center">
 		<div id="sub-heading" class="col-lg-12">
-			<h2>Most Recent Reviews</h2><hr>
+			<h2>Most popular Reviews</h2><hr>
 		</div>
 	</div>
 
@@ -25,13 +25,13 @@
 	<div class="row text-center" style="display: flex flex-wrap: wrap;">
 
 		<% campgrounds.forEach(function(campground) { %>
-			<div class="col-md-6 col-sm-6">
+			<div class="col-md-3 col-sm-6">
 				<div class="thumbnail">
 					<img class="index-images" src="<%= campground.image %>">
 					<div class="caption">
-						<h3><%= campground.name %></h3>
+						<h4><%= campground.name %></h4>
 					</div>
-					<p> 
+					<p>
 						<a href="/campgrounds/<%= campground._id %>" class="btn btn-primary">More Info</a>
 					</p>
 				</div>
