@@ -41,10 +41,12 @@ router.post("/", middleware.isLoggedIn,function(req, res){
                console.log('saving campground');
                campground.save().then(() => {
                 console.log('Campground saved!', campground);
+                req.flash("success", "Comment added successfully!")
+                res.redirect('/campgrounds/' + campground._id);
+                console.log('campground.comments after', campground.comments);
                });
-               console.log('campground.comments after', campground.comments);
-               req.flash("success", "Comment added successfully!")
-               res.redirect('/campgrounds/' + campground._id);
+               // req.flash("success", "Comment added successfully!")
+               // res.redirect('/campgrounds/' + campground._id);
            }
         });
        }
