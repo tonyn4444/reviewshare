@@ -44,6 +44,9 @@ router.post("/", middleware.isLoggedIn,function(req, res){
                 req.flash("success", "Comment added successfully!")
                 res.redirect('/campgrounds/' + campground._id);
                 console.log('campground.comments after', campground.comments);
+               })
+               .catch(error => {
+                console.log("Campground failedd to save successfully.", error);
                });
                // req.flash("success", "Comment added successfully!")
                // res.redirect('/campgrounds/' + campground._id);
